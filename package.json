@@ -1,8 +1,8 @@
 {
-  "name": "vueuploader",
+  "name": "fast-uploader",
   "version": "1.0.0",
-  "description": "Uploader file.",
-  "author": "liurenfei <13966913@qq.com>",
+  "description": "Demo source for a fast uploader dependens on vue-simple-uploader.",
+  "author": "lrfbeyond <https://www.helloweba.net>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
