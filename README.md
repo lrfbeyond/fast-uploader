@@ -31,6 +31,7 @@ npm run build --report
 ----
 ``` bash
 # run php server
+cd php
 php -S localhost:9999
 
 ```
