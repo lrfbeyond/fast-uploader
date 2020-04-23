@@ -4,13 +4,13 @@
  * @Author: Helloweba
  * @Date:   2020-04-08 20:21:06
  * @Last Modified by:   Helloweba
- * @Last Modified time: 2020-04-11 20:29:18
+ * @Last Modified time: 2020-04-23 16:57:16
  */
 
 class Uploader
 {
-    private static $tmpDir = 'D:\laragon\www\helloweba\demo\2020\files_tmp'; //分片临时文件目录
-    private static $saveDir = 'D:\laragon\www\helloweba\demo\2020\files'; //文件最终保存目录
+    private static $tmpDir = 'D:\laragon\www\helloweba\demo\files_tmp'; //分片临时文件目录
+    private static $saveDir = 'D:\laragon\www\helloweba\demo\files'; //文件最终保存目录
     private static $mysql = null;
     public $fileInfo = [
         'identifier' => '',  //文件的唯一标识
@@ -25,7 +25,7 @@ class Uploader
         $conn = [
             'dbhost' => '127.0.0.1',//数据库服务器
             'dbport' => 3306,//端口
-            'dbname' => 'lrfbeyond_demo',//数据库名称
+            'dbname' => 'demo',//数据库名称
             'dbuser' => 'root',//用户名
             'dbpass' => ''//密码
         ];
@@ -199,10 +199,10 @@ class Uploader
             'md5' => $this->fileInfo['identifier'],
             'filepath' => date('Y-m-d') . '/' . $filename
         ];
-        //$url = $this->insertData($fileData);
+        $url = $this->insertData($fileData);
         
         $res['code'] = 0;
-        //$res['url'] = $url;
+        $res['url'] = $url;
         $res['time'] = $timeEnd - $timeStart; //合并总耗时
 
         return $res;
